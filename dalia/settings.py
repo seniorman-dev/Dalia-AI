@@ -187,8 +187,8 @@ DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = [
     "*"
-    #'localhost',
-    #'127.0.0.1',
+    'localhost',
+    '127.0.0.1',
     'dalia-ai-rv8x.onrender.com',
 ]
 
@@ -292,9 +292,9 @@ AUTH_USER_MODEL = 'users.User'
 
 # CORS — allow Flutter to connect
 CORS_ALLOW_ALL_ORIGINS = True  # Tighten this in production
-CORS_ALLOWED_ORIGINS = [
+'''CORS_ALLOWED_ORIGINS = [
     'https://dalia-ai-rv8x.onrender.com',
-]
+]'''
 
 
 # Django REST Framework
