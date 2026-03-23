@@ -74,42 +74,42 @@ dalia-backend/
 Here is every endpoint Flutter will call:
 
 AUTH
-POST   /api/auth/register/          → Register with email
-POST   /api/auth/login/             → Login with email
-POST   /api/auth/google/            → Login with Google
-GET    /api/auth/me/                → Get logged in user
+POST   /api/auth/register/          -> Register with email
+POST   /api/auth/login/             -> Login with email
+POST   /api/auth/google/            -> Login with Google
+GET    /api/auth/me/                -> Get logged in user
 
 CONVERSATIONS
-GET    /api/conversations/                        → List all conversations
-POST   /api/conversations/                        → Create conversation
-GET    /api/conversations/<id>/                   → Get conversation + messages
-PATCH  /api/conversations/<id>/                   → Update title
-DELETE /api/conversations/<id>/                   → Delete conversation
-GET    /api/conversations/<id>/messages/          → Paginated messages
-DELETE /api/conversations/<id>/clear/             → Clear messages
-GET    /api/conversations/sessions/<id>/          → Execution session detail
+GET    /api/conversations/                        -> List all conversations
+POST   /api/conversations/                        -> Create conversation
+GET    /api/conversations/<id>/                   -> Get conversation + messages
+PATCH  /api/conversations/<id>/                   -> Update title
+DELETE /api/conversations/<id>/                   -> Delete conversation
+GET    /api/conversations/<id>/messages/          -> Paginated messages
+DELETE /api/conversations/<id>/clear/             -> Clear messages
+GET    /api/conversations/sessions/<id>/          -> Execution session detail
 
 INTEGRATIONS
-GET    /api/integrations/                         → All tools list
-POST   /api/integrations/connect/                 → Connect a tool
-GET    /api/integrations/<tool>/                  → Tool detail
-DELETE /api/integrations/<tool>/disconnect/       → Disconnect tool
-PATCH  /api/integrations/<tool>/permissions/      → Toggle permission
+GET    /api/integrations/                         -> All tools list
+POST   /api/integrations/connect/                 -> Connect a tool
+GET    /api/integrations/<tool>/                  -> Tool detail
+DELETE /api/integrations/<tool>/disconnect/       -> Disconnect tool
+PATCH  /api/integrations/<tool>/permissions/      -> Toggle permission
 
 WEBSOCKET EVENTS (Socket.IO)
-emit   send_instruction    → Send user instruction
-emit   retry_step          → Retry a failed step
+emit   send_instruction    -> Send user instruction
+emit   retry_step          -> Retry a failed step
 emit   ping                → Keep connection alive
 
-listen connected           → Connection confirmed
-listen instruction_received → Backend acknowledged
-listen parsing_intent      → OpenAI is working
-listen plan_ready          → Execution plan built
-listen step_started        → A step is now running
-listen step_completed      → A step finished successfully
-listen step_failed         → A step failed with error
-listen execution_complete  → Full execution done
-listen pong                → Ping response
+listen connected           -> Connection confirmed
+listen instruction_received -> Backend acknowledged
+listen parsing_intent      -> OpenAI is working
+listen plan_ready          -> Execution plan built
+listen step_started        -> A step is now running
+listen step_completed      -> A step finished successfully
+listen step_failed         -> A step failed with error
+listen execution_complete  -> Full execution done
+listen pong                -> Ping response
 
 
 
