@@ -371,5 +371,5 @@ DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
 EMAIL_BACKEND = os.getenv("EMAIL_BACKEND", "django.core.mail.backends.console.EmailBackend")
 
 
-# SECURITY HEADERS (for production)  base url = https://dalia-ai-rv8x.onrender.coms
-CSRF_TRUSTED_ORIGINS = ["https://dalia-ai.onrender.com"]
+# SECURITY HEADERS (for production)  base url = https://dalia-ai-rv8x.onrender.com
+CSRF_TRUSTED_ORIGINS = ["https://dalia-ai-rv8x.onrender.com"]
