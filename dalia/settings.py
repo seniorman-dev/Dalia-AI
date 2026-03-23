@@ -366,4 +366,4 @@ EMAIL_BACKEND = os.getenv("EMAIL_BACKEND", "django.core.mail.backends.console.Em
 
 
 # SECURITY HEADERS (for production)
-CSRF_TRUSTED_ORIGINS = ["https://dalia.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://dalia-ai.onrender.com"]
