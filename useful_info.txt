@@ -192,6 +192,6 @@ python manage.py makemigrations users conversations integrations agent
 python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
-
+pip freeze > requirements.txt
 
 uvicorn dalia.asgi:application --host 127.0.0.1 --port 8000 --reload
