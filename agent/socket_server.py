@@ -12,11 +12,15 @@ from django.contrib.auth import get_user_model
 
 # Create async Socket.IO server
 # cors_allowed_origins allows Flutter client to connect from any origin
+
 sio = socketio.AsyncServer(
     async_mode='asgi',
     cors_allowed_origins='*',
     logger=True,
-    engineio_logger=False
+    engineio_logger=True,        # add this to see more detail in logs
+    transports=['websocket', 'polling'],  # allow polling fallback
+    ping_timeout=60,
+    ping_interval=25,
 )
 
 User = get_user_model()
