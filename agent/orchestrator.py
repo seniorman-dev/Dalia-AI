@@ -72,7 +72,7 @@ class AgentOrchestrator:
         )
         from asgiref.sync import sync_to_async
 
-        # ── 1. Save user message to DB ──
+        # 1. Save user message to DB 
         conversation = await sync_to_async(
             self._get_or_create_conversation
         )(self.conversation_id)
