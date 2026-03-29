@@ -1,9 +1,9 @@
 pip freeze > requirements.txt
 
 
-`requirements.txt' contains at minimum:
+'requirements.txt' contains at minimum:
 
-```
+
 django>=4.2
 djangorestframework>=3.14
 django-cors-headers>=4.0
@@ -19,7 +19,7 @@ aiohttp>=3.9
 asgiref>=3.7
 google-auth>=2.23
 google-auth-oauthlib>=1.1
-```
+
 
 
 dalia-backend/
