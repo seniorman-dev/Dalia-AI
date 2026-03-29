@@ -219,7 +219,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'corsheaders.middleware.CorsMiddleware',  # Must be high up
+    'corsheaders.middleware.CorsMiddleware', # must be high up for CORS to work
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -288,10 +288,10 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Custom user model — we define this in users app
+# Custom user model - we define this in users app
 AUTH_USER_MODEL = 'users.User'
 
-# CORS — allow Flutter to connect
+# CORS - allow Flutter to connect
 CORS_ALLOW_ALL_ORIGINS = True  # Tighten this in production
 '''CORS_ALLOWED_ORIGINS = [
     'https://dalia-ai-rv8x.onrender.com',
@@ -354,7 +354,7 @@ AUTHENTICATION_BACKENDS = (
     'users.backend.EmailBackend',  # Replace 'myapp' with your app name # Your custom backend
 )
 
-# OpenAI
+# OpenAI & GROQ API Keys
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 GROQ_LLAMA_API_KEY = os.getenv("GROQ_API_KEY")
 
@@ -363,11 +363,11 @@ SOCKETIO_CORS_ALLOWED_ORIGINS = '*'
 
 
 # Email Config (Gmail SMTP)
-EMAIL_HOST = os.getenv('EMAIL_HOST') # Your SMTP server
+EMAIL_HOST = os.getenv('EMAIL_HOST') #SMTP server
 EMAIL_PORT = os.getenv('EMAIL_PORT')
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS')
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD') #Generate your 16 digits password later
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
 EMAIL_BACKEND = os.getenv("EMAIL_BACKEND", "django.core.mail.backends.console.EmailBackend")
 
